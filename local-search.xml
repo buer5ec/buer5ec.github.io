@@ -18,8 +18,8 @@
   
   <entry>
     <title>测试文章</title>
-    <link href="/2021/06/10/test/"/>
-    <url>/2021/06/10/test/</url>
+    <link href="/2021/06/10/test2/"/>
+    <url>/2021/06/10/test2/</url>
     
     <content type="html"><![CDATA[<p>这是一篇测试文章</p><p>测试文章</p><p><img src="/images/a.png" alt="图片引用方法三"></p>]]></content>
     
@@ -43,8 +43,8 @@
   
   <entry>
     <title>测试文章</title>
-    <link href="/2021/06/10/test2/"/>
-    <url>/2021/06/10/test2/</url>
+    <link href="/2021/06/10/test/"/>
+    <url>/2021/06/10/test/</url>
     
     <content type="html"><![CDATA[<p>这是一篇测试文章</p><p>测试文章</p><p><img src="/images/a.png" alt="图片引用方法三"></p>]]></content>
     
