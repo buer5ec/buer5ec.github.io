@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://buer5ec.github.io/images/image-20221101162324623.png">
 <meta property="og:image" content="https://buer5ec.github.io/images/image-20221101165037144.png">
 <meta property="article:published_time" content="2022-11-01T09:48:30.000Z">
-<meta property="article:modified_time" content="2022-11-01T13:23:40.000Z">
+<meta property="article:modified_time" content="2022-11-01T13:47:14.000Z">
 <meta property="article:author" content="buer5ec">
 <meta property="article:tag" content="内存马">
 <meta name="twitter:card" content="summary_large_image">
@@ -395,7 +395,7 @@
 <blockquote>
 <p>跟进getDispatcherMapping()</p>
 <p>如果dispatcherMapping没设置的话返回 REQUEST &#x2F;&#x2F; REQUEST&#x3D;8</p>
-<p>所以上面的matchDispatcher返回true,即不会进入if语句,所以个人认为不需要设置setDispatcher</p>
+<p>所以上面的matchDispatcher返回true,即不会进入if语句,所以新版tomcat可能不需要设置setDispatcher tomcat版本为9.0.65</p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getDispatcherMapping</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-comment">// per the SRV.6.2.5 absence of any dispatcher elements is</span><br>    <span class="hljs-comment">// equivalent to a REQUEST value</span><br>    <span class="hljs-keyword">if</span> (dispatcherMapping == NOT_SET) &#123;<br>        <span class="hljs-keyword">return</span> REQUEST;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> dispatcherMapping;<br>&#125;<br></code></pre></td></tr></table></figure>
 
